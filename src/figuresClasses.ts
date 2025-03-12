@@ -48,7 +48,7 @@ export class Circle implements Figure {
   }
 
   getArea(): number {
-    return Math.round(Math.PI * this.radius ** 2 * 100) / 100;
+    return Math.floor(Math.PI * this.radius ** 2 * 100) / 100;
   }
 }
 
@@ -66,7 +66,7 @@ export class Rectangle implements Figure {
   }
 
   getArea(): number {
-    return Math.round(this.a * this.b * 100) / 100;
+    return Math.floor(this.a * this.b * 100) / 100;
   }
 }
 
