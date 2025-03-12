@@ -16,7 +16,12 @@ export class Triangle implements Figure {
       (side1, side2) => side2 - side1,
     );
 
-    if (a <= 0 || b <= 0 || c <= 0 || sides[0] >= sides[1] + sides[2]) {
+    if (
+      this.a <= 0 ||
+      this.b <= 0 ||
+      this.c <= 0 ||
+      sides[0] >= sides[1] + sides[2]
+    ) {
       throw new Error('Impossible triangle');
     }
   }
@@ -37,7 +42,7 @@ export class Circle implements Figure {
     public color: string,
     public radius: number,
   ) {
-    if (radius <= 0) {
+    if (this.radius <= 0) {
       throw new Error('Impossible circle');
     }
   }
@@ -55,8 +60,8 @@ export class Rectangle implements Figure {
     public a: number,
     public b: number,
   ) {
-    if (a <= 0 || b <= 0) {
-      throw new Error('Impossible square');
+    if (this.a <= 0 || this.b <= 0) {
+      throw new Error('Impossible rectangle');
     }
   }
 
